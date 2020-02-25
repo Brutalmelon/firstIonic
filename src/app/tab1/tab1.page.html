@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      User Input
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">User Input</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-text class = "tb1-txtbox">This tab is to demonstrate user input.</ion-text>
+
+<ion-item>
+  <ion-label> Enter Name: </ion-label>
+  <ion-input type="string" [(ngModel)] = "userName"> </ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label> Enter Age: </ion-label>
+  <ion-input type="number" [(ngModel)] = "userAge"> </ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label> Anything else you want: </ion-label>
+  <ion-input type="string" [(ngModel)] = "userDesires"> </ion-input>
+</ion-item>
+
+<ion-button ion-button (click) = "btnConsole()" color="secondary" shape= "round"><ion-icon slot ="start" name="document-text-outline" class = "tb1-console"></ion-icon> Console log it!</ion-button>
+<ion-button ion-button (click) = "btnAlert()" color="warning" shape= "round" class = "tb1-alert"><ion-icon slot ="start" name="chatbubble-ellipses-outline"></ion-icon> Alert it!</ion-button>
+
+</ion-content>
